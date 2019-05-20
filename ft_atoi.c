@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ref.h                                              :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:16:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/20 11:15:38 by tswart           ###   ########.fr       */
+/*   Created: 2019/05/20 09:36:23 by tswart            #+#    #+#             */
+/*   Updated: 2019/05/20 11:46:32 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "ft_putchar.c"
-#include "ft_putstr.c"
-#include "ft_putnbr.c"
-#include "ft_strlen.c"
-#include "ft_atoi.c"
+int		ft_atoi(char* nbr)
+{
+	int i;
+	int sign;
+	int n;
+
+	sign = 1;
+	i = 0;
+	n = 0;
+	while ((nbr[i] != '\0') &! ((nbr[i] == '-' && ('0' <= nbr[i+1] && nbr[i+1] <= '9')) || ('0' <= nbr[i+1] && nbr[i+1] <= '9')))
+		i++;
+	if (nbr[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while ((nbr[i] != '\0') && '0' <= nbr[i] && nbr[i] <= '9')
+	{
+		n = (n * 10) + (nbr[i] - 48);
+		i++;
+	}
+	return (n * sign);
+}
