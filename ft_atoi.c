@@ -6,11 +6,11 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:36:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/20 11:46:32 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/20 12:31:59 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char* nbr)
+int		ft_atoi(char *nbr)
 {
 	int i;
 	int sign;
@@ -19,11 +19,12 @@ int		ft_atoi(char* nbr)
 	sign = 1;
 	i = 0;
 	n = 0;
-	while ((nbr[i] != '\0') &! ((nbr[i] == '-' && ('0' <= nbr[i+1] && nbr[i+1] <= '9')) || ('0' <= nbr[i+1] && nbr[i+1] <= '9')))
-		i++;
-	if (nbr[i] == '-')
+	if (!nbr)
+		return (0);
+	while ((nbr[i] != '\0') && !('0' <= nbr[i] && nbr[i] <= '9'))
 	{
-		sign = -1;
+		if ('0' <= nbr[i + 1] && nbr[i + 1] <= '9')
+			sign = -1;
 		i++;
 	}
 	while ((nbr[i] != '\0') && '0' <= nbr[i] && nbr[i] <= '9')

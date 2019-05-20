@@ -6,13 +6,13 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:50:30 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/20 09:15:26 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/20 12:01:34 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-void ft_putstr(char* str)
+void	ft_putstr(char *str)
 {
 	int i;
 
@@ -22,5 +22,4 @@ void ft_putstr(char* str)
 		ft_putchar(str[i]);
 		i++;
 	}
-	return;
 }
