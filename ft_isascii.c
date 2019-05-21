@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:55:29 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/21 15:35:18 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/21 15:49:53 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ int		ft_isupper(int c)
 	else
 		return (0);
 }
-int		ft_islower(int c);
+
+int		ft_islower(int c)
 {
 	if (97 <= c && c <= 122)
 	{
@@ -94,7 +95,7 @@ int		ft_isblank(int c)
 	if (c == 9 || c == 32)
 	{
 		return (c);
-	}	
+	}
 	else
 		return (0);
 }
