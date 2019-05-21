@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 08:55:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/21 09:40:07 by tswart           ###   ########.fr       */
+/*   Created: 2019/05/21 08:18:53 by tswart            #+#    #+#             */
+/*   Updated: 2019/05/21 12:12:29 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	if (n < 0)
+	size_t i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
 	{
-		ft_putchar('-');
-		n = n * -1;
+		dst[i] = src[i];
+		i++;
 	}
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	ft_putchar((n % 10) + 48);
+	dst[i] = '\0';
+	return (dst);
 }
