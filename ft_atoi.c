@@ -6,11 +6,21 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:36:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/20 12:31:59 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/22 14:11:47 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *nbr)
+static int	ft_isspace(int c)
+{
+	if (c == 32 || (9 <= c && c <= 15))
+	{
+		return (c);
+	}
+	else
+		return (0);
+}
+
+int			ft_atoi(char *nbr)
 {
 	int i;
 	int sign;
@@ -19,15 +29,18 @@ int		ft_atoi(char *nbr)
 	sign = 1;
 	i = 0;
 	n = 0;
+	while (ft_isspace(nbr[i]))
+		i++;
 	if (!nbr)
 		return (0);
-	while ((nbr[i] != '\0') && !('0' <= nbr[i] && nbr[i] <= '9'))
+	if (nbr[i] == '-')
 	{
-		if ('0' <= nbr[i + 1] && nbr[i + 1] <= '9')
-			sign = -1;
+		sign = -1;
 		i++;
 	}
-	while ((nbr[i] != '\0') && '0' <= nbr[i] && nbr[i] <= '9')
+	else if (nbr[i] == '+')
+		i++;
+	while ((nbr[i] != '\0') && ('0' <= nbr[i] && nbr[i] <= '9'))
 	{
 		n = (n * 10) + (nbr[i] - 48);
 		i++;

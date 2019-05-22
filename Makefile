@@ -6,7 +6,7 @@
 #    By: tswart <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 15:17:26 by tswart            #+#    #+#              #
-#    Updated: 2019/05/20 16:51:21 by tswart           ###   ########.fr        #
+#    Updated: 2019/05/21 10:41:45 by tswart           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME):
 	$(CC) $(CFLAGS) -c $(SOURCES)
 	ar rc $(NAME) $(OBJECTS)
-	ranlib $(NAMES)
+	ranlib $(NAME)
 	rm -f $(OBJECTS)
 
 clean:
