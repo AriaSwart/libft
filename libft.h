@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/22 11:37:33 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:51:20 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 # include <unistd.h>
 # include <string.h>
 
-int		isalnum(int c);
-int		isalpha(int c);
-int		isascii(int c);
-int		isblank(int c);
-int		iscntrl(int c);
-int		isdigit(int c);
-int		isgraph(int c);
-int		islower(int c);
-int		isprint(int c);
-int		ispunct(int c);
-int		isspace(int c);
-int		isupper(int c);
-int		isxdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isblank(int c);
+int		ft_iscntrl(int c);
+int		ft_isdigit(int c);
+int		ft_isgraph(int c);
+int		ft_islower(int c);
+int		ft_isprint(int c);
+int		ft_ispunct(int c);
+int		ft_isspace(int c);
+int		ft_isupper(int c);
+int		ft_isxdigit(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char *c);
 void	ft_putnbr(int n);

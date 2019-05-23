@@ -6,12 +6,11 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:32:20 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/21 16:49:11 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:56:28 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_islower.c"
-#include "ft_isupper.c"
+#include "libft.h"
 
 int		ft_isalpha(int c)
 {
