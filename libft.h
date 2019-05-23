@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/23 10:51:20 by tswart           ###   ########.fr       */
+/*   Updated: 2019/05/23 13:23:54 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -33,8 +34,9 @@ void	ft_putstr(char *c);
 void	ft_putnbr(int n);
 size_t	ft_strlen(char *str);
 int		ft_atoi(char *str);
-char	*ft_strncpy(char *dst, const char *src, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
+;char	*ft_strdup(const char *str1);
 
 #endif
