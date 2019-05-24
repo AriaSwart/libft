@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:36:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/23 13:39:34 by tswart           ###   ########.fr       */
+/*   Created: 2019/05/24 10:57:52 by tswart            #+#    #+#             */
+/*   Updated: 2019/05/24 11:24:06 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(char *nbr)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	int sign;
-	int n;
+	size_t i;
 
-	sign = 1;
 	i = 0;
-	n = 0;
-	while (ft_isspace(nbr[i]))
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
-	if (!nbr)
-		return (0);
-	if (nbr[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (nbr[i] == '+')
-		i++;
-	while ((nbr[i] != '\0') && ('0' <= nbr[i] && nbr[i] <= '9'))
-	{
-		n = (n * 10) + (nbr[i] - 48);
-		i++;
-	}
-	return (n * sign);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
