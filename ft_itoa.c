@@ -17,6 +17,8 @@ static int	ft_len(long nb)
 	int		l;
 
 	l = 0;
+	if (nb == 0)
+	    return (1);
 	if (nb < 0)
 	{
 		nb = nb * -1;
@@ -38,7 +40,7 @@ char		*ft_itoa(int nb)
 
 	i = ft_len(nb);
 	n = nb;
-	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
+	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	str[i--] = '\0';
 	if (n == 0)
