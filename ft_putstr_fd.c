@@ -17,9 +17,10 @@ void	ft_putstr_fd(char *str, int fd)
 	unsigned int i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	if (str)
+	    while (str[i] != '\0')
+	    {
 		ft_putchar_fd(str[i], fd);
 		i++;
-	}
+	    }
 }
