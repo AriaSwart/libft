@@ -60,6 +60,8 @@ char	**ft_strsplit(char const *s, char c)
 
 	n = 0;
 	i = 0;
+	if (!s || !c)
+	    return (NULL);
 	if (!(new = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1)))
 		|| !s)
 		return (NULL);
