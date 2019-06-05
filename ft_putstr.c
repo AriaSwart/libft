@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:50:30 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/21 09:44:31 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:25:57 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	if (str)
-	    while (str[i] != '\0')
-	    {
-		ft_putchar(str[i]);
-		i++;
-	    }
+		while (str[i] != '\0')
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 }

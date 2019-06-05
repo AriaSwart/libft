@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:16:11 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/24 13:09:28 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/05 12:24:38 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	ft_putendl_fd(char *str, int fd)
 	i = 0;
 	if (str)
 	{
-	    while (str[i] != '\0')
-	    {
-		ft_putchar_fd(str[i], fd);
-		i++;
-	    }
-	    ft_putchar_fd('\n', fd);
+		while (str[i] != '\0')
+		{
+			ft_putchar_fd(str[i], fd);
+			i++;
+		}
+		ft_putchar_fd('\n', fd);
 	}
 }
