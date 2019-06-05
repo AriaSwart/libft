@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:16:11 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/24 12:21:45 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/05 11:46:51 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_putstr_fd(char *str, int fd)
 
 	i = 0;
 	if (str)
-	    while (str[i] != '\0')
-	    {
-		ft_putchar_fd(str[i], fd);
-		i++;
-	    }
+		while (str[i] != '\0')
+		{
+			ft_putchar_fd(str[i], fd);
+			i++;
+		}
 }
