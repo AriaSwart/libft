@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:06:14 by tswart            #+#    #+#             */
-/*   Updated: 2019/06/05 10:24:10 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/06 11:41:15 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,11 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	n;
 	size_t	t;
 
-	n = 0;
 	i = 0;
-	if (!(new = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1)))
-			|| !s || !c)
+	n = 0;
+	if (!s || !c)
+		return (NULL);
+	if (!(new = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
 		return (NULL);
 	while ((int)i < ft_wordcount(s, c))
 	{
@@ -72,8 +73,7 @@ char	**ft_strsplit(char const *s, char c)
 			n++;
 		while (s[n] != c && s[n])
 			new[i][t++] = s[n++];
-		new[i][t] = '\0';
-		i++;
+		new[i++][t] = '\0';
 	}
 	new[i] = 0;
 	return (new);
