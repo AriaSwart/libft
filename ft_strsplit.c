@@ -6,13 +6,13 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:06:14 by tswart            #+#    #+#             */
-/*   Updated: 2019/06/06 11:41:15 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/11 12:25:10 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_wordcount(const char *s, char c)
+static int	ft_wordcount(const char *s, char c)
 {
 	size_t	i;
 	size_t	n;
@@ -31,7 +31,7 @@ int		ft_wordcount(const char *s, char c)
 	return ((int)n);
 }
 
-int		ft_wlen(const char *s, char c)
+static int	ft_wlen(const char *s, char c)
 {
 	size_t	i;
 	size_t	n;
@@ -51,7 +51,7 @@ int		ft_wlen(const char *s, char c)
 	return ((int)n);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**new;
 	size_t	i;

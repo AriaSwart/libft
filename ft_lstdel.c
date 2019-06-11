@@ -6,13 +6,13 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 08:45:00 by tswart            #+#    #+#             */
-/*   Updated: 2019/06/06 11:33:17 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/11 12:23:14 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (* del)(void *, size_t))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list *ls1;
 	t_list *ls2;
