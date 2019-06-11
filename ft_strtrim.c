@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:11:50 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/29 08:40:30 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/11 13:28:53 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s)
 	while (s[i] != '\0' && ft_isspace(s[i]))
 		i++;
 	if (s[i] == '\0')
-		return ("");
+		return (ft_strnew(0));
 	while (i < t && ft_isspace(s[t - 1]))
 		t--;
 	n = t - i;
