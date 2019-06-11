@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:32:20 by tswart            #+#    #+#             */
-/*   Updated: 2019/05/23 10:56:28 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/11 13:18:54 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 int		ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))
-	{
-		return (c);
-	}
-	else
-		return (0);
+		return (1);
+	return (0);
 }
