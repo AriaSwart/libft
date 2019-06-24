@@ -6,7 +6,7 @@
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:23 by tswart            #+#    #+#             */
-/*   Updated: 2019/06/11 12:21:47 by tswart           ###   ########.fr       */
+/*   Updated: 2019/06/24 10:40:42 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void				ft_putstr_fd(char *c, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putendl_fd(char *c, int fd);
 size_t				ft_strlen(const char *str);
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_strcpy(char *dst, const char *src);
