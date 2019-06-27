@@ -6,7 +6,7 @@
 #    By: tswart <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 15:17:26 by tswart            #+#    #+#              #
-#    Updated: 2019/06/11 12:27:37 by tswart           ###   ########.fr        #
+#    Updated: 2019/06/26 10:29:22 by tswart           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,9 @@ SOURCES = ft_atoi.c \
 	   ft_iscntrl.c \
 	   ft_isgraph.c \
 	   ft_ispunct.c \
-	   ft_isspace.c
+	   ft_isspace.c \
+	   ft_dupdel.c \
+	   ft_replacechr.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
