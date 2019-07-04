@@ -6,7 +6,7 @@
 #    By: tswart <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 15:17:26 by tswart            #+#    #+#              #
-#    Updated: 2019/06/26 10:29:22 by tswart           ###   ########.fr        #
+#    Updated: 2019/07/01 08:59:38 by tswart           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SOURCES = ft_atoi.c \
 	   ft_isalpha.c \
 	   ft_memcmp.c \
 	   ft_strchr.c \
+	   ft_strchri.c \
 	   ft_strncat.c \
 	   ft_isascii.c \
 	   ft_memcpy.c \

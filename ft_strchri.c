@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_replacechr.c                                    :+:      :+:    :+:   */
+/*   ft_strchri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tswart <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/26 10:29:42 by tswart            #+#    #+#             */
-/*   Updated: 2019/06/28 09:44:17 by tswart           ###   ########.fr       */
+/*   Created: 2019/05/24 12:37:48 by tswart            #+#    #+#             */
+/*   Updated: 2019/07/01 08:58:40 by tswart           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_replacechr(char **str, char f, char r)
+int		ft_strchri(const char *s, int c)
 {
-	char *ptr;
+	int i;
 
-	if ((ptr = ft_strchr(*str, f)) == NULL)
-		return (NULL);
-	*ptr = r;
-	return (ptr);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return (i);
+		i++;
+	}
+	if (s[i] == '\0' && (char)c == '\0')
+		return (i);
+	return (0);
 }
